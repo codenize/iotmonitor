@@ -95,20 +95,16 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AppShell.xaml.cs">
+      <DependentUpon>AppShell.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\MessageDialog.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Navigation\NavMenuItem.cs" />
+    <Compile Include="Navigation\NavMenuListView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\AddItems.xaml.cs">
-      <DependentUpon>AddItems.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\BrowseItemDetail.xaml.cs">
-      <DependentUpon>BrowseItemDetail.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MainPivot.xaml.cs">
-      <DependentUpon>MainPivot.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -131,21 +127,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AppShell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\AddItems.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\BrowseItemDetail.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Styles\NavStyles.xaml">
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\MainPivot.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +145,10 @@
       <Project>{c7935e47-7d64-4069-adff-2ffad662b785}</Project>
       <Name>IoTMonitor</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

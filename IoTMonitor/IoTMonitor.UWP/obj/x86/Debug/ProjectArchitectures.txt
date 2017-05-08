@@ -1,2 +1,0 @@
-C:\Developer\IoTMonitor\IoTMonitor\IoTMonitor.UWP\IoTMonitor.UWP.csproj;x86
-C:\Developer\IoTMonitor\IoTMonitor\IoTMonitor\IoTMonitor.csproj;neutral

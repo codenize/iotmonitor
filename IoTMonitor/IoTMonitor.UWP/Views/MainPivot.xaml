@@ -7,6 +7,7 @@
     xmlns:viewmodels="using:IoTMonitor.ViewModel"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:nav="using:IoTMonitor.Navigation"
     mc:Ignorable="d"
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
     Background="{StaticResource PrimaryColor}">
@@ -24,8 +25,70 @@
             </StackPanel>
         </DataTemplate>
     </Page.Resources>
+    <Grid x:Name="LayoutRoot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!--  Declared first for screen reader navigation order, ZIndex specified to have it rendered above everything else.  -->
+        <ToggleButton x:Name="TogglePaneButton"
+                      AutomationProperties.Name="Navigation"
+                      Canvas.ZIndex="100"
+                      Checked="TogglePaneButton_Checked"
+                      IsChecked="{Binding IsPaneOpen,
+                                          ElementName=RootSplitView,
+                                          Mode=TwoWay}"
+                      Style="{StaticResource SplitViewTogglePaneButtonStyle}"
+                      TabIndex="1"
+                      ToolTipService.ToolTip="Navigation"
+                      Unchecked="TogglePaneButton_Unchecked"/>
 
-    <Pivot x:Name="rootPivot" Title="IoTMonitor.UWP" SelectionChanged="PivotItemChanged">
+        <!--  Top-level navigation menu + app content.  -->
+        <!--  Initial value for IsPaneOpen is set in the VisualStates.  -->
+        <SplitView x:Name="RootSplitView"
+                   DisplayMode="CompactInline"
+                   IsTabStop="False"
+                   OpenPaneLength="320"
+                   PaneBackground="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                   PaneClosed="RootSplitView_PaneClosed">
+
+            <SplitView.Pane>
+                <Grid x:Name="PaneContentGrid"
+                      Background="Transparent">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="6"/>
+                    </Grid.RowDefinitions>
+
+                    <!--  A custom ListView to display the items in the pane.  The automation Name is set in the ContainerContentChanging event.  -->
+                    <nav:NavMenuListView x:Name="NavMenuList"
+                                         Margin="0,52,0,0"
+                                         ContainerContentChanging="NavMenuItemContainerContentChanging"
+                                         IsEnabled="True"
+                                         ItemContainerStyle="{StaticResource NavMenuItemContainerStyle}"
+                                         ItemInvoked="NavMenuList_ItemInvoked"
+                                         ItemTemplate="{StaticResource NavMenuItemTemplate}"
+                                         TabIndex="3"/>
+                    
+                    <Rectangle x:Name="NavPaneDivider"
+                               Grid.Row="1"
+                               Height="1"
+                               Margin="16,0,16,6"
+                               Fill="{ThemeResource SystemControlForegroundBaseLowBrush}"/>
+                    <Button x:Name="SettingsNavPaneButton"
+                            Grid.Row="3"
+                            Grid.Column="2"
+                            AutomationProperties.Name="Settings"
+                            Content="&#xE713;"
+                            Style="{StaticResource SplitViewPaneButtonStyle}"
+                            ToolTipService.ToolTip="Settings"/>
+                </Grid>
+
+            </SplitView.Pane>
+        </SplitView>
+    </Grid>
+    <!--<Pivot x:Name="rootPivot" Title="IoT MonitorP" SelectionChanged="PivotItemChanged">
+        
+       
         <PivotItem Header="{Binding Title}" DataContext="{Binding BrowseViewModel}">
             <ListView ItemsSource="{Binding Items}" ItemTemplate="{StaticResource GvItemTemplate}"
                       ItemClick="GvItems_ItemClick" SelectionMode="None" IsItemClickEnabled="True">
@@ -38,7 +101,7 @@
                 </Border>
                 <StackPanel Padding="10">
                     <TextBlock Margin="0,20" FontSize="20">
-                            <Bold>IoTMonitor.UWP&#160;</Bold>
+                            <Bold>IoT Monitor</Bold>
                             <Span Foreground="{StaticResource LightTextColor}">1.0</Span>
                     </TextBlock>
                     <TextBlock TextWrapping="WrapWholeWords">
@@ -51,7 +114,7 @@
                 </StackPanel>
             </StackPanel>
         </PivotItem>
-    </Pivot>
+    </Pivot>-->
 
     <Page.BottomAppBar>
         <CommandBar Name="Toolbar" ClosedDisplayMode="Compact">
