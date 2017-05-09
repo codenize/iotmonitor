@@ -34,6 +34,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Navigation;
 using IoTMonitor.UWP.Navigation;
+using IoTMonitor.UWP.Pages;
 
 namespace IoTMonitor.UWP
 {
@@ -50,9 +51,9 @@ namespace IoTMonitor.UWP
             {
                 new NavMenuItem()
                 {
-                    //Symbol = Symbol.ContactInfo,
-                    //Label = "Customer list",
-                    //DestPage = typeof(CustomerListPage)
+                    Symbol = Symbol.Calculator,
+                    Label = "Stats",
+                    DestPage = typeof(StatsPage)
                 },
                 new NavMenuItem()
                 {

@@ -37,20 +37,20 @@ namespace IoTMonitor.UWP.Pages
         {
             base.OnNavigatedTo(e);
 
-            _compositor = ElementCompositionPreview.GetElementVisual(this)?.Compositor;
-            PoseData = new ObservableCollection<Pose>((Pose[])e.Parameter);
+            //_compositor = ElementCompositionPreview.GetElementVisual(this)?.Compositor;
+            //PoseData = new ObservableCollection<Pose>((Pose[])e.Parameter);
 
-            GenerateTimings();
+            //GenerateTimings();
 
-            this.SizeChanged += StatsPage_SizeChanged;
+            //this.SizeChanged += StatsPage_SizeChanged;
 
-            await Task.Run(() =>
-            {
-                //CheckHeartRate();
-            });
+            //await Task.Run(() =>
+            //{
+            //    //CheckHeartRate();
+            //});
 
-            _timer = new DispatcherTimer();
-            _timer.Tick += _timer_Tick;
+            //_timer = new DispatcherTimer();
+            //_timer.Tick += _timer_Tick;
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
