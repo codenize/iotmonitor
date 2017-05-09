@@ -89,6 +89,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="Models\data.json" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -102,9 +103,32 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Pose.cs" />
+    <Compile Include="Models\TrainingVideo.cs" />
+    <Compile Include="Models\Video.cs" />
+    <Compile Include="Models\WorkoutTiming.cs" />
+    <Compile Include="Models\YogaData.cs" />
     <Compile Include="Navigation\NavMenuItem.cs" />
     <Compile Include="Navigation\NavMenuListView.cs" />
+    <Compile Include="Pages\StatsPage.xaml.cs">
+      <DependentUpon>StatsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScoreConverter.cs" />
+    <Compile Include="UserControls\CollapsibleSearchBox.xaml.cs">
+      <DependentUpon>CollapsibleSearchBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DetailExpander.xaml.cs">
+      <DependentUpon>DetailExpander.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\IoTMonitorListView.cs" />
+    <Compile Include="UserControls\PageHeader.xaml.cs">
+      <DependentUpon>PageHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\BindableBase.cs" />
+    <Compile Include="Views\MainPivot.xaml.cs">
+      <DependentUpon>MainPivot.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -135,7 +159,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\StatsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Styles\NavStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\CollapsibleSearchBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\DetailExpander.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\PageHeader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPivot.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -146,10 +190,7 @@
       <Name>IoTMonitor</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\" />
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

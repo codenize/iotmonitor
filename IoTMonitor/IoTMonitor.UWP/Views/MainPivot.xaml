@@ -7,7 +7,7 @@
     xmlns:viewmodels="using:IoTMonitor.ViewModel"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:nav="using:IoTMonitor.Navigation"
+    xmlns:nav="using:IoTMonitor.UWP.Navigation"
     mc:Ignorable="d"
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
     Background="{StaticResource PrimaryColor}">
