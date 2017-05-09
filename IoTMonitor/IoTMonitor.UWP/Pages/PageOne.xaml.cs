@@ -22,13 +22,13 @@ namespace IoTMonitor.UWP.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class StatsPage : Page, INotifyPropertyChanged
+    public sealed partial class PageOne : Page, INotifyPropertyChanged
     {
 
 
         private Compositor _compositor;
 
-        public StatsPage()
+        public PageOne()
         {
             this.InitializeComponent();
         }
@@ -44,10 +44,10 @@ namespace IoTMonitor.UWP.Pages
 
             //this.SizeChanged += StatsPage_SizeChanged;
 
-            //await Task.Run(() =>
-            //{
-            //    //CheckHeartRate();
-            //});
+            await Task.Run(() =>
+            {
+               //CheckHeartRate();
+            });
 
             //_timer = new DispatcherTimer();
             //_timer.Tick += _timer_Tick;
