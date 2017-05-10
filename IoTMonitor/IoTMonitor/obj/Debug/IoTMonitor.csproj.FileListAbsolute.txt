@@ -8,11 +8,3 @@ C:\Developer\IoTMonitor\IoTMonitor\IoTMonitor\bin\Debug\Plugin.Share.Abstraction
 C:\Developer\IoTMonitor\IoTMonitor\IoTMonitor\bin\Debug\Plugin.Share.Abstractions.xml
 C:\Developer\IoTMonitor\IoTMonitor\IoTMonitor\obj\Debug\IoTMonitor.dll
 C:\Developer\IoTMonitor\IoTMonitor\IoTMonitor\obj\Debug\IoTMonitor.pdb
-C:\Developer\IoTMonitor\IoTMonitor\IoTMonitor\obj\Debug\IoTMonitor.dll.mdb
-C:\Developer\IoTMonitor\IoTMonitor\IoTMonitor\bin\Debug\IoTMonitor.dll.mdb
-C:\Developer\IoTMonitor\IoTMonitor\IoTMonitor\obj\Debug\IoTMonitor.dll.mdb
-C:\Developer\IoTMonitor\IoTMonitor\IoTMonitor\bin\Debug\IoTMonitor.dll.mdb
-C:\Developer\IoTMonitor\IoTMonitor\IoTMonitor\obj\Debug\IoTMonitor.dll.mdb
-C:\Developer\IoTMonitor\IoTMonitor\IoTMonitor\bin\Debug\IoTMonitor.dll.mdb
-C:\Developer\IoTMonitor\IoTMonitor\IoTMonitor\obj\Debug\IoTMonitor.dll.mdb
-C:\Developer\IoTMonitor\IoTMonitor\IoTMonitor\bin\Debug\IoTMonitor.dll.mdb

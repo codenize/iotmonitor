@@ -13,11 +13,11 @@ namespace IoTMonitor.UWP.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class PageThree : Page, INotifyPropertyChanged
+    public sealed partial class PageD : Page, INotifyPropertyChanged
     {
 
 
-        public PageThree()
+        public PageD()
         {
             this.InitializeComponent();
         }
