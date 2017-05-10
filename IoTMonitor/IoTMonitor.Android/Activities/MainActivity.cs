@@ -15,7 +15,7 @@ namespace IoTMonitor.Droid
         LaunchMode = LaunchMode.SingleInstance,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
         ScreenOrientation = ScreenOrientation.Portrait)]
-    //public class MainActivity : BaseActivity
+    public class MainActivity : BaseActivity
     {
 
         protected override int LayoutResource => Resource.Layout.activity_main;

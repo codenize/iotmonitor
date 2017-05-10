@@ -110,6 +110,9 @@
     <Compile Include="Models\YogaData.cs" />
     <Compile Include="Navigation\NavMenuItem.cs" />
     <Compile Include="Navigation\NavMenuListView.cs" />
+    <Compile Include="Pages\PageThree.xaml.cs">
+      <DependentUpon>PageThree.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PageTwo.xaml.cs">
       <DependentUpon>PageTwo.xaml</DependentUpon>
     </Compile>
@@ -161,6 +164,10 @@
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageThree.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\PageTwo.xaml">
       <Generator>MSBuild:Compile</Generator>

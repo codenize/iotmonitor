@@ -1,5 +1,4 @@
-﻿using IoTMonitor.Model;
-using IoTMonitor.ViewModel;
+﻿
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.UI.Xaml;

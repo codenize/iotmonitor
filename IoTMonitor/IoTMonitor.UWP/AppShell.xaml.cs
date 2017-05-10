@@ -61,6 +61,13 @@ namespace IoTMonitor.UWP
                     Label = "Stats",
                     DestPage = typeof(PageTwo)
                 },
+                 new NavMenuItem()
+                {
+                    Symbol = Symbol.World,
+                    Label = "Stats",
+                    DestPage = typeof(PageThree)
+                },
+
             });
 
         public static AppShell Current = null;
