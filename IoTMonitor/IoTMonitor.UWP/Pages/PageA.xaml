@@ -5,12 +5,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:models="using:IoTMonitor.UWP.Models"
-    xmlns:IoTMonitor="using:IoTMonitor.UWP"
+    
     mc:Ignorable="d">
-    <Page.Resources>
-        <IoTMonitor:ScoreConverter x:Key="ScoreConverter" />
-    </Page.Resources>
-
+    
     <Grid Background="{ThemeResource LeftSectionColor}">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -204,12 +201,7 @@
                                             <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
 
-                                        <Image Source="{x:Bind Position}" Grid.Row="0" HorizontalAlignment="Center" />
-                                        <TextBlock Text="{x:Bind Name}" Foreground="White" Grid.Row="1" Margin="16,16,0,0" FontSize="14" />
-                                        <ProgressBar Value="{x:Bind Score}" Grid.Row="2" HorizontalAlignment="Stretch" Margin="16,8,20,0" Foreground="{x:Bind Score, Converter={StaticResource ScoreConverter}}"/>
-                                        <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="16,8,0,0" >
-                                            <TextBlock Text="{x:Bind Comment}" Foreground="{x:Bind Score, Converter={StaticResource ScoreConverter}}" FontSize="9" />
-                                        </StackPanel>
+                                       
                                     </Grid>
                                 </DataTemplate>
                             </GridView.ItemTemplate>

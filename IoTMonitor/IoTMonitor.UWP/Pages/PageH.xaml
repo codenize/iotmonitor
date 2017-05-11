@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="IoTMonitor.UWP.Pages.PageC"
+    x:Class="IoTMonitor.UWP.Pages.PageH"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:IoTMonitor.UWP.Pages"
@@ -11,6 +11,9 @@
     <Page.Resources>
         
     </Page.Resources>
+    <Page.TopAppBar>
+        <AppBar Background="#FFB21717"/>
+    </Page.TopAppBar>
 
     <Grid Background="{ThemeResource LeftSectionColor}">
         

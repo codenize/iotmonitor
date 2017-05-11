@@ -128,8 +128,19 @@
     <Compile Include="Pages\PageF.xaml.cs">
       <DependentUpon>PageF.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PageG.xaml.cs">
+      <DependentUpon>PageG.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageH.xaml.cs">
+      <DependentUpon>PageH.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageI.xaml.cs">
+      <DependentUpon>PageI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageJ.xaml.cs">
+      <DependentUpon>PageJ.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScoreConverter.cs" />
     <Compile Include="UserControls\CollapsibleSearchBox.xaml.cs">
       <DependentUpon>CollapsibleSearchBox.xaml</DependentUpon>
     </Compile>
@@ -195,6 +206,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\PageF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageG.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageH.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageJ.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -51,19 +51,19 @@ namespace IoTMonitor.UWP
             {
                 new NavMenuItem()
                 {
-                    Symbol = Symbol.Calculator,
+                    Symbol = Symbol.Page,
                     Label = "Stats",
                     DestPage = typeof(PageA)
                 },
                 new NavMenuItem()
                 {
-                    Symbol = Symbol.Calculator,
+                    Symbol = Symbol.Page,
                     Label = "Stats",
                     DestPage = typeof(PageB)
                 },
                 new NavMenuItem()
                 {
-                    Symbol = Symbol.World,
+                    Symbol = Symbol.Page,
                     Label = "Stats",
                     DestPage = typeof(PageC)
                 },
@@ -81,9 +81,33 @@ namespace IoTMonitor.UWP
                 },
                 new NavMenuItem()
                 {
-                    Symbol = Symbol.World,
+                    Symbol = Symbol.Page,
                     Label = "F",
                     DestPage = typeof(PageF)
+                },
+                new NavMenuItem()
+                {
+                    Symbol = Symbol.Page,
+                    Label = "G",
+                    DestPage = typeof(PageG)
+                },
+                new NavMenuItem()
+                {
+                    Symbol = Symbol.Page,
+                    Label = "H",
+                    DestPage = typeof(PageH)
+                },
+                new NavMenuItem()
+                {
+                    Symbol = Symbol.Page,
+                    Label = "I",
+                    DestPage = typeof(PageI)
+                },
+                new NavMenuItem()
+                {
+                    Symbol = Symbol.Page,
+                    Label = "J",
+                    DestPage = typeof(PageJ)
                 },
 
             });
