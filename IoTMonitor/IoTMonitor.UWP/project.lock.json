@@ -2,6 +2,18 @@
   "version": 2,
   "targets": {
     "UAP,Version=v10.0": {
+      "Microsoft.Advertising.JS/10.1705.11001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Advertising.JS.targets": {}
+        }
+      },
+      "Microsoft.Advertising.XAML/10.1705.11001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Advertising.XAML.targets": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -347,6 +359,20 @@
         "runtime": {
           "lib/win81/Microsoft.OneDrive.Sdk.Authentication.WinRT.dll": {},
           "lib/win81/Microsoft.OneDrive.Sdk.Authentication.WinStore.dll": {}
+        }
+      },
+      "Microsoft.Services.Store.Engagement/10.1610.0": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Services.Store.Engagement.targets": {}
+        }
+      },
+      "Microsoft.Services.Store.SDK/10.1705.11001": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Advertising.JS": "10.1705.11001",
+          "Microsoft.Advertising.Xaml": "10.1705.11001",
+          "Microsoft.Services.Store.Engagement": "10.1610.0"
         }
       },
       "Microsoft.Toolkit.Uwp/1.4.1": {
@@ -2768,9 +2794,28 @@
       },
       "IoTMonitor/1.0.0": {
         "type": "project"
+      },
+      "LIN/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        }
       }
     },
     "UAP,Version=v10.0/win10-arm": {
+      "Microsoft.Advertising.JS/10.1705.11001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Advertising.JS.targets": {}
+        }
+      },
+      "Microsoft.Advertising.XAML/10.1705.11001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Advertising.XAML.targets": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3063,6 +3108,20 @@
         "runtime": {
           "lib/win81/Microsoft.OneDrive.Sdk.Authentication.WinRT.dll": {},
           "lib/win81/Microsoft.OneDrive.Sdk.Authentication.WinStore.dll": {}
+        }
+      },
+      "Microsoft.Services.Store.Engagement/10.1610.0": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Services.Store.Engagement.targets": {}
+        }
+      },
+      "Microsoft.Services.Store.SDK/10.1705.11001": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Advertising.JS": "10.1705.11001",
+          "Microsoft.Advertising.Xaml": "10.1705.11001",
+          "Microsoft.Services.Store.Engagement": "10.1610.0"
         }
       },
       "Microsoft.Toolkit.Uwp/1.4.1": {
@@ -5446,9 +5505,28 @@
       },
       "IoTMonitor/1.0.0": {
         "type": "project"
+      },
+      "LIN/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        }
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
+      "Microsoft.Advertising.JS/10.1705.11001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Advertising.JS.targets": {}
+        }
+      },
+      "Microsoft.Advertising.XAML/10.1705.11001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Advertising.XAML.targets": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -5742,6 +5820,20 @@
         "runtime": {
           "lib/win81/Microsoft.OneDrive.Sdk.Authentication.WinRT.dll": {},
           "lib/win81/Microsoft.OneDrive.Sdk.Authentication.WinStore.dll": {}
+        }
+      },
+      "Microsoft.Services.Store.Engagement/10.1610.0": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Services.Store.Engagement.targets": {}
+        }
+      },
+      "Microsoft.Services.Store.SDK/10.1705.11001": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Advertising.JS": "10.1705.11001",
+          "Microsoft.Advertising.Xaml": "10.1705.11001",
+          "Microsoft.Services.Store.Engagement": "10.1610.0"
         }
       },
       "Microsoft.Toolkit.Uwp/1.4.1": {
@@ -8163,9 +8255,28 @@
       },
       "IoTMonitor/1.0.0": {
         "type": "project"
+      },
+      "LIN/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        }
       }
     },
     "UAP,Version=v10.0/win10-x64": {
+      "Microsoft.Advertising.JS/10.1705.11001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Advertising.JS.targets": {}
+        }
+      },
+      "Microsoft.Advertising.XAML/10.1705.11001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Advertising.XAML.targets": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -8461,6 +8572,20 @@
         "runtime": {
           "lib/win81/Microsoft.OneDrive.Sdk.Authentication.WinRT.dll": {},
           "lib/win81/Microsoft.OneDrive.Sdk.Authentication.WinStore.dll": {}
+        }
+      },
+      "Microsoft.Services.Store.Engagement/10.1610.0": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Services.Store.Engagement.targets": {}
+        }
+      },
+      "Microsoft.Services.Store.SDK/10.1705.11001": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Advertising.JS": "10.1705.11001",
+          "Microsoft.Advertising.Xaml": "10.1705.11001",
+          "Microsoft.Services.Store.Engagement": "10.1610.0"
         }
       },
       "Microsoft.Toolkit.Uwp/1.4.1": {
@@ -10850,9 +10975,28 @@
       },
       "IoTMonitor/1.0.0": {
         "type": "project"
+      },
+      "LIN/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        }
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
+      "Microsoft.Advertising.JS/10.1705.11001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Advertising.JS.targets": {}
+        }
+      },
+      "Microsoft.Advertising.XAML/10.1705.11001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Advertising.XAML.targets": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -11149,6 +11293,20 @@
         "runtime": {
           "lib/win81/Microsoft.OneDrive.Sdk.Authentication.WinRT.dll": {},
           "lib/win81/Microsoft.OneDrive.Sdk.Authentication.WinStore.dll": {}
+        }
+      },
+      "Microsoft.Services.Store.Engagement/10.1610.0": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Services.Store.Engagement.targets": {}
+        }
+      },
+      "Microsoft.Services.Store.SDK/10.1705.11001": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Advertising.JS": "10.1705.11001",
+          "Microsoft.Advertising.Xaml": "10.1705.11001",
+          "Microsoft.Services.Store.Engagement": "10.1610.0"
         }
       },
       "Microsoft.Toolkit.Uwp/1.4.1": {
@@ -13576,9 +13734,28 @@
       },
       "IoTMonitor/1.0.0": {
         "type": "project"
+      },
+      "LIN/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        }
       }
     },
     "UAP,Version=v10.0/win10-x86": {
+      "Microsoft.Advertising.JS/10.1705.11001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Advertising.JS.targets": {}
+        }
+      },
+      "Microsoft.Advertising.XAML/10.1705.11001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Advertising.XAML.targets": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -13874,6 +14051,20 @@
         "runtime": {
           "lib/win81/Microsoft.OneDrive.Sdk.Authentication.WinRT.dll": {},
           "lib/win81/Microsoft.OneDrive.Sdk.Authentication.WinStore.dll": {}
+        }
+      },
+      "Microsoft.Services.Store.Engagement/10.1610.0": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Services.Store.Engagement.targets": {}
+        }
+      },
+      "Microsoft.Services.Store.SDK/10.1705.11001": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Advertising.JS": "10.1705.11001",
+          "Microsoft.Advertising.Xaml": "10.1705.11001",
+          "Microsoft.Services.Store.Engagement": "10.1610.0"
         }
       },
       "Microsoft.Toolkit.Uwp/1.4.1": {
@@ -16263,9 +16454,28 @@
       },
       "IoTMonitor/1.0.0": {
         "type": "project"
+      },
+      "LIN/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        }
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
+      "Microsoft.Advertising.JS/10.1705.11001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Advertising.JS.targets": {}
+        }
+      },
+      "Microsoft.Advertising.XAML/10.1705.11001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Advertising.XAML.targets": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -16562,6 +16772,20 @@
         "runtime": {
           "lib/win81/Microsoft.OneDrive.Sdk.Authentication.WinRT.dll": {},
           "lib/win81/Microsoft.OneDrive.Sdk.Authentication.WinStore.dll": {}
+        }
+      },
+      "Microsoft.Services.Store.Engagement/10.1610.0": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Services.Store.Engagement.targets": {}
+        }
+      },
+      "Microsoft.Services.Store.SDK/10.1705.11001": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Advertising.JS": "10.1705.11001",
+          "Microsoft.Advertising.Xaml": "10.1705.11001",
+          "Microsoft.Services.Store.Engagement": "10.1610.0"
         }
       },
       "Microsoft.Toolkit.Uwp/1.4.1": {
@@ -18989,10 +19213,97 @@
       },
       "IoTMonitor/1.0.0": {
         "type": "project"
+      },
+      "LIN/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        }
       }
     }
   },
   "libraries": {
+    "Microsoft.Advertising.JS/10.1705.11001": {
+      "sha512": "OG2lgl7q8XvLrAgQile5//UqqmxC53l2lZ0WZWPJbnMrUsgSt519mge3cTTGz42rjhjgBuFvN6GJrNXfz14LZQ==",
+      "type": "package",
+      "path": "microsoft.advertising.js/10.1705.11001",
+      "files": [
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/Appx/ARM/Microsoft.Advertising.JavaScript.ARM.10.0.appx",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/Appx/x64/Microsoft.Advertising.JavaScript.x64.10.0.appx",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/Appx/x86/Microsoft.Advertising.JavaScript.x86.10.0.appx",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/ad.js",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/ar/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/cs/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/da/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/de/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/el/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/es/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/et/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/fi/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/fr/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/he/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/hu/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/it/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/ja/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/ko/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/nb/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/nl/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/pl/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/pt-BR/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/pt-PT/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/ru/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/zh-CN/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/DesignTime/CommonConfiguration/neutral/Microsoft.Advertising.JavaScript/metadata/zh-TW/ad.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.JavaScript/10.0/SDKManifest.xml",
+        "build/Microsoft.Advertising.JS.targets",
+        "microsoft.advertising.js.10.1705.11001.nupkg.sha512",
+        "microsoft.advertising.js.nuspec"
+      ]
+    },
+    "Microsoft.Advertising.XAML/10.1705.11001": {
+      "sha512": "6E1jo3sOx1UsyW0Z5kPb9erNIwR8WmcAKUnj6yAlKxgYs+GCEAfeJMPDHX2WXCspyBkqzu0R7gNYn62aJm7CSA==",
+      "type": "package",
+      "path": "microsoft.advertising.xaml/10.1705.11001",
+      "files": [
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/Appx/ARM/Microsoft.Advertising.Xaml.ARM.10.0.appx",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/Appx/x64/Microsoft.Advertising.Xaml.x64.10.0.appx",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/Appx/x86/Microsoft.Advertising.Xaml.x86.10.0.appx",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/Extension.vsixmanifest",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/License.rtf",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/Redist.txt",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/Redist/CommonConfiguration/x86/Microsoft.Advertising.dll",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/Microsoft.Advertising.winmd",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/ar/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/cs/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/da/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/de/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/el/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/en/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/es/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/et/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/fi/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/fr/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/he/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/hu/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/it/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/ja/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/ko/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/nb/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/nl/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/pl/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/pt-BR/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/pt-PT/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/ru/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/zh-CN/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/References/CommonConfiguration/neutral/zh-TW/Microsoft.Advertising.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Advertising.Xaml/10.0/SDKManifest.xml",
+        "build/Microsoft.Advertising.XAML.targets",
+        "microsoft.advertising.xaml.10.1705.11001.nupkg.sha512",
+        "microsoft.advertising.xaml.nuspec"
+      ]
+    },
     "Microsoft.CSharp/4.3.0": {
       "sha512": "P+MBhIM0YX+JqROuf7i306ZLJEjQYA9uUyRDE+OqwUI5sh41e2ZbPQV3LfAPh+29cmceE1pUffXsGfR4eMY3KA==",
       "type": "package",
@@ -21390,6 +21701,34 @@
         "lib/win81/Microsoft.OneDrive.Sdk.Authentication.WinStore.dll",
         "microsoft.onedrivesdk.authentication.1.0.8.nupkg.sha512",
         "microsoft.onedrivesdk.authentication.nuspec"
+      ]
+    },
+    "Microsoft.Services.Store.Engagement/10.1610.0": {
+      "sha512": "wHdY3PxAHD4tLYSNiLn575R7P73VZSYXM7sapyqfB4w9nbbukDvbjJS5gyzbs9NPzGhOtki9LH0CikaJ8gNFKQ==",
+      "type": "package",
+      "path": "microsoft.services.store.engagement/10.1610.0",
+      "files": [
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/Appx/ARM/Microsoft.Services.Store.Engagement.ARM.10.0.appx",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/Appx/x64/Microsoft.Services.Store.Engagement.x64.10.0.appx",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/Appx/x86/Microsoft.Services.Store.Engagement.x86.10.0.appx",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/License.rtf",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/Redist.txt",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/References/CommonConfiguration/neutral/Microsoft.Services.Store.Engagement.winmd",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/References/CommonConfiguration/neutral/en/Microsoft.Services.Store.Engagement.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/SDKManifest.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/extension.vsixmanifest",
+        "build/Microsoft.Services.Store.Engagement.targets",
+        "microsoft.services.store.engagement.10.1610.0.nupkg.sha512",
+        "microsoft.services.store.engagement.nuspec"
+      ]
+    },
+    "Microsoft.Services.Store.SDK/10.1705.11001": {
+      "sha512": "XDikH/Iigh+ov9bDOndWD2+OHR1hvhiQ8Q7DJLtl3acMdQEeoSx3YyWFMVTSJ6qqB8E9NlSFqiXTyoRe/w1lxQ==",
+      "type": "package",
+      "path": "microsoft.services.store.sdk/10.1705.11001",
+      "files": [
+        "microsoft.services.store.sdk.10.1705.11001.nupkg.sha512",
+        "microsoft.services.store.sdk.nuspec"
       ]
     },
     "Microsoft.Toolkit.Uwp/1.4.1": {
@@ -27980,11 +28319,17 @@
       "type": "project",
       "path": "../IoTMonitor/IoTMonitor.csproj",
       "msbuildProject": "../IoTMonitor/IoTMonitor.csproj"
+    },
+    "LIN/1.0.0": {
+      "type": "project",
+      "path": "../../LIN/LIN.csproj",
+      "msbuildProject": "../../LIN/LIN.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.3.3",
+      "Microsoft.Services.Store.SDK >= 10.1705.11001",
       "Microsoft.Toolkit.Uwp >= 1.4.1",
       "Microsoft.Toolkit.Uwp.Services >= 1.4.1",
       "Microsoft.Toolkit.Uwp.UI >= 1.4.1",
@@ -28007,6 +28352,9 @@
       "frameworks": {
         "uap10.0": {
           "projectReferences": {
+            "C:\\Developer\\IoTMonitor\\LIN\\LIN.csproj": {
+              "projectPath": "C:\\Developer\\IoTMonitor\\LIN\\LIN.csproj"
+            },
             "C:\\Developer\\IoTMonitor\\IoTMonitor\\IoTMonitor\\IoTMonitor.csproj": {
               "projectPath": "C:\\Developer\\IoTMonitor\\IoTMonitor\\IoTMonitor\\IoTMonitor.csproj"
             }
@@ -28016,6 +28364,7 @@
     },
     "dependencies": {
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.3",
+      "Microsoft.Services.Store.SDK": "10.1705.11001",
       "Microsoft.Toolkit.Uwp": "1.4.1",
       "Microsoft.Toolkit.Uwp.Services": "1.4.1",
       "Microsoft.Toolkit.Uwp.UI": "1.4.1",

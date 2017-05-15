@@ -109,6 +109,24 @@ namespace IoTMonitor.UWP
                     Label = "J",
                     DestPage = typeof(PageJ)
                 },
+                new NavMenuItem()
+                {
+                    Symbol = Symbol.Page,
+                    Label = "K",
+                    DestPage = typeof(PageLIN)
+                },
+                new NavMenuItem()
+                {
+                    Symbol = Symbol.Page,
+                    Label = "L",
+                    DestPage = typeof(PageL)
+                },
+                new NavMenuItem()
+                {
+                    Symbol = Symbol.Setting,
+                    Label = "M",
+                    DestPage = typeof(PageM)
+                },
 
             });
 

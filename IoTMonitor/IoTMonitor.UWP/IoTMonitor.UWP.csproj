@@ -140,6 +140,18 @@
     <Compile Include="Pages\PageJ.xaml.cs">
       <DependentUpon>PageJ.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PageLIN.xaml.cs">
+      <DependentUpon>PageLIN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageL.xaml.cs">
+      <DependentUpon>PageL.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageM.xaml.cs">
+      <DependentUpon>PageM.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\CollapsibleSearchBox.xaml.cs">
       <DependentUpon>CollapsibleSearchBox.xaml</DependentUpon>
@@ -225,6 +237,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageLIN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageM.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Styles\NavStyles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -247,6 +275,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\LIN\LIN.csproj">
+      <Project>{08b61fbb-3e4e-418d-a3b0-4c91f8b1b023}</Project>
+      <Name>LIN</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IoTMonitor\IoTMonitor.csproj">
       <Project>{c7935e47-7d64-4069-adff-2ffad662b785}</Project>
       <Name>IoTMonitor</Name>

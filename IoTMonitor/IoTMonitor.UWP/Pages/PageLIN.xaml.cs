@@ -13,11 +13,11 @@ namespace IoTMonitor.UWP.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class PageC : Page, INotifyPropertyChanged
+    public sealed partial class PageLIN : Page, INotifyPropertyChanged
     {
 
 
-        public PageC()
+        public PageLIN()
         {
             this.InitializeComponent();
         }
@@ -69,6 +69,16 @@ namespace IoTMonitor.UWP.Pages
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-       
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            LIN.Client client = new LIN.Client()
+            {
+                Sensor1 = 7
+            };
+            if (sender.Equals(btnSensor1))
+            {
+                btnSensor1.SetValue(TextBlock.TextProperty, "hghgk");
+            }
+        }
     }
 }
