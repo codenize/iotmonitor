@@ -1,11 +1,10 @@
 ﻿using System;
-using IoTMonitor.Interfaces;
 using MessageBox = Windows.UI.Popups.MessageDialog;
 using Windows.UI.Popups;
 
 namespace IoTMonitor.UWP.Helpers
 {
-    public class MessageDialog : IMessageDialog
+    public class MessageDialog 
     {
 
         public async void SendMessage(string message, string title = null)

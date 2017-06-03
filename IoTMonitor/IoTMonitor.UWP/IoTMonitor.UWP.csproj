@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -11,11 +11,12 @@
     <AssemblyName>IoTMonitor.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.15063.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.15063.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.14393.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
     <PackageCertificateKeyFile>IoTMonitor.UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
@@ -87,72 +88,55 @@
     <Prefer32Bit>true</Prefer32Bit>
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <None Include="Models\data.json" />
-    <None Include="project.json" />
+    <PackageReference Include="Microsoft.Data.Sqlite">
+      <Version>1.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>5.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Uwp.Managed">
+      <Version>2.0.0</Version>
+    </PackageReference>
+    <!-- Nuget package references -->
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
+      <Version>1.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="WindowsAzure.Messaging.Managed">
+      <Version>0.1.7.9</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>10.0.2</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="AppShell.xaml.cs">
-      <DependentUpon>AppShell.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Activation\ActivationHandler.cs" />
+    <Compile Include="BackgroundTasks\BackgroundTask.cs" />
+    <Compile Include="BackgroundTasks\GatewayManagerTask.cs" />
+    <Compile Include="Data\DataManager.cs" />
+    <Compile Include="Helpers\Json.cs" />
     <Compile Include="Helpers\MessageDialog.cs" />
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Pose.cs" />
-    <Compile Include="Models\TrainingVideo.cs" />
-    <Compile Include="Models\Video.cs" />
-    <Compile Include="Models\WorkoutTiming.cs" />
-    <Compile Include="Models\YogaData.cs" />
-    <Compile Include="Navigation\NavMenuItem.cs" />
-    <Compile Include="Navigation\NavMenuListView.cs" />
-    <Compile Include="Pages\PageC.xaml.cs">
-      <DependentUpon>PageC.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageB.xaml.cs">
-      <DependentUpon>PageB.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageA.xaml.cs">
-      <DependentUpon>PageA.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageD.xaml.cs">
-      <DependentUpon>PageD.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageE.xaml.cs">
-      <DependentUpon>PageE.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageF.xaml.cs">
-      <DependentUpon>PageF.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageG.xaml.cs">
-      <DependentUpon>PageG.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageH.xaml.cs">
-      <DependentUpon>PageH.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageI.xaml.cs">
-      <DependentUpon>PageI.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageJ.xaml.cs">
-      <DependentUpon>PageJ.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageLIN.xaml.cs">
-      <DependentUpon>PageLIN.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageL.xaml.cs">
-      <DependentUpon>PageL.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageM.xaml.cs">
-      <DependentUpon>PageM.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\SettingsPage.xaml.cs">
-      <DependentUpon>SettingsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\SettingsStorageExtensions.cs" />
+    <Compile Include="Helpers\TaskExtensions.cs" />
+    <Compile Include="Models\SampleModel.cs" />
+    <Compile Include="Services\ActivationService.cs" />
+    <Compile Include="Activation\DefaultLaunchActivationHandler.cs" />
+    <Compile Include="Services\BackgroundTaskService.cs" />
+    <Compile Include="Services\HubNotificationsService.cs" />
+    <Compile Include="Services\LiveTileService.cs" />
+    <Compile Include="Services\LiveTileService.Samples.cs" />
+    <Compile Include="Services\LocationService.cs" />
+    <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="Services\OnBackgroundEnteringEventArgs.cs" />
+    <Compile Include="Services\SampleModelService.cs" />
+    <Compile Include="Services\SuspendAndResumeService.cs" />
+    <Compile Include="Services\SuspensionState.cs" />
+    <Compile Include="Services\ThemeSelectorService.cs" />
+    <Compile Include="Services\ToastNotificationsService.cs" />
+    <Compile Include="Services\ToastNotificationsService.Samples.cs" />
     <Compile Include="UserControls\CollapsibleSearchBox.xaml.cs">
       <DependentUpon>CollapsibleSearchBox.xaml</DependentUpon>
     </Compile>
@@ -160,13 +144,125 @@
       <DependentUpon>DetailExpander.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\IoTMonitorListView.cs" />
-    <Compile Include="UserControls\PageHeader.xaml.cs">
-      <DependentUpon>PageHeader.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="ValueConverters\BooleanInverterConverter.cs" />
+    <Compile Include="ValueConverters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\DateStringFormatConverter.cs" />
+    <Compile Include="ValueConverters\DateToStringConverter.cs" />
+    <Compile Include="ValueConverters\GenericConverter.cs" />
+    <Compile Include="ValueConverters\NullToBooleanConverter.cs" />
+    <Compile Include="ValueConverters\NullToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\OrderStatusToStringConverter.cs" />
+    <Compile Include="ValueConverters\PaymentStatusToStringConverter.cs" />
+    <Compile Include="ValueConverters\StringFormatterConverter.cs" />
+    <Compile Include="ValueConverters\StringVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\TermToStringConverter.cs" />
     <Compile Include="ViewModels\BindableBase.cs" />
-    <Compile Include="Views\MainPivot.xaml.cs">
-      <DependentUpon>MainPivot.xaml</DependentUpon>
+    <Compile Include="Views\ActionsDetailControl.xaml.cs">
+      <DependentUpon>ActionsDetailControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ActionsDetailPage.xaml.cs">
+      <DependentUpon>ActionsDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ActionsPage.xaml.cs">
+      <DependentUpon>ActionsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AnalyticsDetailControl.xaml.cs">
+      <DependentUpon>AnalyticsDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AnalyticsDetailPage.xaml.cs">
+      <DependentUpon>AnalyticsDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AnalyticsPage.xaml.cs">
+      <DependentUpon>AnalyticsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashboardsDetailControl.xaml.cs">
+      <DependentUpon>DashboardsDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashboardsDetailPage.xaml.cs">
+      <DependentUpon>DashboardsDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashboardsPage.xaml.cs">
+      <DependentUpon>DashboardsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GatewaysDetailControl.xaml.cs">
+      <DependentUpon>GatewaysDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GatewaysDetailPage.xaml.cs">
+      <DependentUpon>GatewaysDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GatewaysPage.xaml.cs">
+      <DependentUpon>GatewaysPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MapPage.xaml.cs">
+      <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PeopleDetailControl.xaml.cs">
+      <DependentUpon>PeopleDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PeopleDetailPage.xaml.cs">
+      <DependentUpon>PeopleDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PeoplePage.xaml.cs">
+      <DependentUpon>PeoplePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlacesDetailControl.xaml.cs">
+      <DependentUpon>PlacesDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlacesDetailPage.xaml.cs">
+      <DependentUpon>PlacesDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlacesPage.xaml.cs">
+      <DependentUpon>PlacesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SaveChangesDialog.xaml.cs">
+      <DependentUpon>SaveChangesDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellNavigationItem.cs" />
+    <Compile Include="Views\ShellPage.xaml.cs">
+      <DependentUpon>ShellPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StoreDetailControl.xaml.cs">
+      <DependentUpon>StoreDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StoreDetailPage.xaml.cs">
+      <DependentUpon>StoreDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StorePage.xaml.cs">
+      <DependentUpon>StorePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThingsDetailControl.xaml.cs">
+      <DependentUpon>ThingsDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThingsDetailPage.xaml.cs">
+      <DependentUpon>ThingsDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThingsPage.xaml.cs">
+      <DependentUpon>ThingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TriggersDetailControl.xaml.cs">
+      <DependentUpon>TriggersDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TriggersDetailPage.xaml.cs">
+      <DependentUpon>TriggersDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TriggersPage.xaml.cs">
+      <DependentUpon>TriggersPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Strings\en-us\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -174,7 +270,12 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\profile_generic.png" />
+    <Compile Include="Helpers\ResourceExtensions.cs" />
+    <Compile Include="Helpers\Singleton.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Assets\map.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -185,74 +286,16 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".editorconfig" />
+    <None Include="IoTMonitor.UWP_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="AppShell.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\PageC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Pages\PageB.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Pages\PageA.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Pages\PageD.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\PageE.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\PageF.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\PageG.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\PageH.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\PageI.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\PageJ.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\PageLIN.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\PageL.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\PageM.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\SettingsPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+  </ItemGroup>
+  <ItemGroup>
     <Page Include="Styles\NavStyles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -265,26 +308,135 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UserControls\PageHeader.xaml">
+    <Page Include="Views\ActionsDetailControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\MainPivot.xaml">
+    <Page Include="Views\ActionsDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ActionsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AnalyticsDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AnalyticsDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AnalyticsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DashboardsDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DashboardsDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DashboardsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GatewaysDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GatewaysDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GatewaysPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MapPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PeopleDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PeopleDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PeoplePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PlacesDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PlacesDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PlacesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SaveChangesDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ShellPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\StoreDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\StoreDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\StorePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ThingsDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ThingsDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ThingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TriggersDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TriggersDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TriggersPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\LIN\LIN.csproj">
-      <Project>{08b61fbb-3e4e-418d-a3b0-4c91f8b1b023}</Project>
-      <Name>LIN</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\IoTMonitor\IoTMonitor.csproj">
-      <Project>{c7935e47-7d64-4069-adff-2ffad662b785}</Project>
-      <Name>IoTMonitor</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

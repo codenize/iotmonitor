@@ -1,16 +1,16 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("IoT Monitor")]
+[assembly: AssemblyTitle("IoTMonitor.UWP")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Codenize Software Services Inc.")]
-[assembly: AssemblyProduct("IoT Monitor")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("IoTMonitor.UWP")]
+[assembly: AssemblyCopyright("Copyright ©  1976")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

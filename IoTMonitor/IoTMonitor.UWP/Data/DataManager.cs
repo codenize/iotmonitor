@@ -8,8 +8,9 @@ using Microsoft.Data.Sqlite.Internal;
 
 namespace IoTMonitor.Services
 {
-    class DataManager
+    public class DataManager
     {
+
         private void BuildDatabase()
         {
             SqliteEngine.UseWinSqlite3(); //Configuring library to use SDK version of SQLite
